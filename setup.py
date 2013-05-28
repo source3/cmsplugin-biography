@@ -16,5 +16,6 @@ setup(
     long_description=open('README.rst').read(),
     license='MIT',
     url='http://github.com/kfr2/cmsplugin-biography',
-    include_package_data=True
+    include_package_data=True,
+    zip_safe=False
 )
