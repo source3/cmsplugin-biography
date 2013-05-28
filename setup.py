@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='cmsplugin-biography',
     version='0.0.1',
-    packages=['cmsplugin_biography', ],
+    packages=['cmsplugin_biography', 'cmsplugin_biography.migrations', ],
     install_requires=[
         'django-cms',
         'djangocms-text-ckeditor==1.0.9',
