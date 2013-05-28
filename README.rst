@@ -13,7 +13,7 @@ This work is released under the MIT license. See ``LICENSE`` for more details.
 Installation
 ============
 1. Load your project's virtualenv.
-2. Run ``pip install git+git://github.com/kfr/cmsplugin-biography.git``.
+2. Run ``pip install git+git://github.com/kfr2/cmsplugin-biography.git``.
 3. Add 'cmsplugin_biography' and 'easy_thumbnails' to the ``INSTALLED_APPS`` setting.
 4. Set ``THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE`` (or to your storage backend of choice) in ``settings.py``.
 5. Run ``python manage.py syncdb`` or ``python manage.py migrate`` if you have South installed.
