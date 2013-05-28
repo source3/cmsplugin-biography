@@ -13,12 +13,6 @@ if not aliases.get('badge'):
     aliases.set('badge', {'size': (150, 80), 'crop': True})
 
 
-class ActiveManager(models.Manager):
-    """Returns objects with a field value of active=True."""
-    def get_queryset(self):
-        return super(ActiveManager, self).get_queryset().filter(active=True)
-
-
 class PersonBiography(models.Model):
     """Stores biographical information about a Person."""
     first_name = models.CharField(max_length=200)
@@ -30,8 +24,6 @@ class PersonBiography(models.Model):
     image = models.ImageField(upload_to='biography_person', blank=True)
     active = models.BooleanField(default=True,
         help_text=_('If checked, this biography will be available in the plugin list.'))
-
-    active_objects = ActiveManager()
 
     class Meta:
         ordering = ('last_name', 'first_name', )
