@@ -9,4 +9,3 @@ class PersonBiographyPluginForm(ModelForm):
 
     class Meta:
         model = PersonBiography
-        fields = '__all__'

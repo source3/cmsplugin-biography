@@ -1,0 +1,18 @@
+{% extends "admin/cms/page/plugin_change_form.html" %}
+
+{% block after_field_sets %}
+    <p>&raquo; <a id="modify-biography" href="#" target="_blank">View and modify the biography of the selected person</a>.</p>
+    <script type="text/javascript">
+        (function() {
+            function updateModifyAnchor(id) {
+                $('#modify-biography').attr('href', '/admin/cmsplugin_biography/personbiography/' + id);
+            }
+
+            $('#id_person').live('change', function() {
+                updateModifyAnchor($('#id_person').val());
+            });
+
+            updateModifyAnchor($('#id_person').val());
+        })();
+    </script>
+{% endblock %}
